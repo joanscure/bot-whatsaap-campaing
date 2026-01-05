@@ -415,5 +415,469 @@
     "options": {},
     "from": "51943549521",
     "refSerialize": "715ca38ec28b8dabb30e75e511c57a3a"
+  },
+  {
+    "ref": "548ea11e-46b6-4f35-9108-af3bfeeefd89",
+    "keyword": "715ca38ec28b8dabb30e75e511c57a3a",
+    "answer": "Hola",
+    "options": {},
+    "from": "51943549521",
+    "refSerialize": "c22e4066d61d81721def9b25d8a397e8"
+  },
+  {
+    "ref": "ans_ad5556c2-e745-4a9c-92db-ab6430e07a9f",
+    "keyword": "key_a049d1c6-8dd4-43e4-88ce-a663a3b76411",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "d66fb65d733a82c1cd8877d29529907b",
+    "from": "51943549521"
+  },
+  {
+    "ref": "82105603-8b04-47af-a697-b78f04e157ac",
+    "keyword": null,
+    "answer": "*Hola!*\n\nComandos disponibles:\n- *spam* - Enviar mensajes masivos a WhatsApp\n\nQue deseas hacer?",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51943549521",
+    "refSerialize": "2c07b1cc19dde94940c650d739ee37db"
+  },
+  {
+    "ref": "6609e707-b911-4a82-bac7-d62a2c59dca8",
+    "keyword": "ans_ad5556c2-e745-4a9c-92db-ab6430e07a9f",
+    "answer": "__end_flow__",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51943549521",
+    "refSerialize": "a07e48655d1eb1adf63c1b74c6ee668e"
+  },
+  {
+    "ref": "8f8f4fb6-70fa-4a3e-8abd-5c1e7edb6864",
+    "keyword": "a07e48655d1eb1adf63c1b74c6ee668e",
+    "answer": "spam",
+    "options": {},
+    "from": "51943549521",
+    "refSerialize": "31dde3b16acbb4494b54c8548858477d"
+  },
+  {
+    "ref": "ans_58374f3f-0264-4a83-9f17-2a735a83683d",
+    "keyword": "key_ed63f78f-0aea-4e43-aa50-105d0825b3e9",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "cbd225391bed741ed8bfe1f12f72e7b2",
+    "from": "51943549521"
+  },
+  {
+    "ref": "71359eae-cf5b-47ca-9841-7c97573f986f",
+    "keyword": null,
+    "answer": "*Vamos a enviar mensajes!*\n\n*Paso 1:* Enviame la lista de numeros de WhatsApp.\n\nLos numeros pueden estar:\n- Con codigo de pais: 51987654321\n- Sin codigo: 987654321\n\nPuedes enviarlos:\n- Separados por comas, espacios o saltos de linea\n- *O envia un archivo CSV* con los numeros en la primera columna\n\nEscribe *Cancel* en cualquier momento para cancelar.",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51943549521",
+    "refSerialize": "d278ead1299abf2b7575a553846ece99"
+  },
+  {
+    "ref": "ec4159b8-256d-477a-9b84-ab64dcf3b0f2",
+    "keyword": "cbd225391bed741ed8bfe1f12f72e7b2",
+    "answer": "94359421\n51906834826",
+    "options": {},
+    "from": "51943549521",
+    "refSerialize": "48b8dd428273ac81686d15f50b2dac03"
+  },
+  {
+    "ref": "ans_ad5556c2-e745-4a9c-92db-ab6430e07a9f",
+    "keyword": "key_a049d1c6-8dd4-43e4-88ce-a663a3b76411",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "d66fb65d733a82c1cd8877d29529907b",
+    "from": "51943549521"
+  },
+  {
+    "ref": "24b94eb1-8dbe-4db5-b7e4-7a491f1c6fb9",
+    "keyword": null,
+    "answer": "*Perfecto!* Encontre 1 numero(s) valido(s):\n\n51906834826\n\n*Paso 2:* Ahora enviame el mensaje que quieres reenviar a todos.\n\nEscribe *Cancel* para cancelar.",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51943549521",
+    "refSerialize": "07233a1ade31cf4f236a42cf5e4e0850"
+  },
+  {
+    "ref": "8807a5b4-88a8-4165-a523-7c25fc81fa93",
+    "keyword": "ans_ad5556c2-e745-4a9c-92db-ab6430e07a9f",
+    "answer": "__end_flow__",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51943549521",
+    "refSerialize": "a07e48655d1eb1adf63c1b74c6ee668e"
+  },
+  {
+    "ref": "db0df13c-a8d8-4db3-b81f-9b7747a52d97",
+    "keyword": "a07e48655d1eb1adf63c1b74c6ee668e",
+    "answer": "hola",
+    "options": {},
+    "from": "51943549521",
+    "refSerialize": "79e7fc16f7fb85373fd25a99390f44c0"
+  },
+  {
+    "ref": "ans_f1eeb6b5-03ad-4b39-b869-186f2204c51f",
+    "keyword": "key_71f451da-84d8-458f-85ed-cd411118e080",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "a81d4f221110f3c8e10cdb01107d9a1d",
+    "from": "51943549521"
+  },
+  {
+    "ref": "fcd6c6fc-30fa-4f9d-8915-bcf22cdb0680",
+    "keyword": null,
+    "answer": "*Hola!*\n\nComandos disponibles:\n- *spam* - Enviar mensajes masivos a WhatsApp\n\nQue deseas hacer?",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51943549521",
+    "refSerialize": "2c07b1cc19dde94940c650d739ee37db"
+  },
+  {
+    "ref": "2b989b60-91d5-4a27-b1b1-578186ff5c35",
+    "keyword": "ans_f1eeb6b5-03ad-4b39-b869-186f2204c51f",
+    "answer": "__end_flow__",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51943549521",
+    "refSerialize": "a07e48655d1eb1adf63c1b74c6ee668e"
+  },
+  {
+    "ref": "2bfb2340-b83b-4e8a-a157-e69fce36d4ff",
+    "keyword": "a07e48655d1eb1adf63c1b74c6ee668e",
+    "answer": "spam",
+    "options": {},
+    "from": "51943549521",
+    "refSerialize": "31dde3b16acbb4494b54c8548858477d"
+  },
+  {
+    "ref": "ans_9627b4e4-d259-4a0a-b1d0-5d7c15c38186",
+    "keyword": "key_7bbcc79d-a7e5-4a7a-83a6-b23e033e5b6d",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "d7814eae081f5077b4276b1028283f4e",
+    "from": "51943549521"
+  },
+  {
+    "ref": "f67d2997-ec53-4d93-a5be-88a5257e400b",
+    "keyword": null,
+    "answer": "*Vamos a enviar mensajes!*\n\n*Paso 1:* Enviame la lista de numeros de WhatsApp.\n\nLos numeros pueden estar:\n- Con codigo de pais: 51987654321\n- Sin codigo: 987654321\n\nPuedes enviarlos:\n- Separados por comas, espacios o saltos de linea\n- *O envia un archivo CSV* con los numeros en la primera columna\n\nEscribe *Cancel* en cualquier momento para cancelar.",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51943549521",
+    "refSerialize": "d278ead1299abf2b7575a553846ece99"
+  },
+  {
+    "ref": "98b5cfe9-7a8b-4b71-8540-49df8fd67c4c",
+    "keyword": "d7814eae081f5077b4276b1028283f4e",
+    "answer": "943549521\n51906834826",
+    "options": {},
+    "from": "51943549521",
+    "refSerialize": "26739018993c0d3f54ac6d1e48df4194"
+  },
+  {
+    "ref": "ans_f1eeb6b5-03ad-4b39-b869-186f2204c51f",
+    "keyword": "key_71f451da-84d8-458f-85ed-cd411118e080",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "a81d4f221110f3c8e10cdb01107d9a1d",
+    "from": "51943549521"
+  },
+  {
+    "ref": "417d79a4-8035-447e-8d77-6d9878112996",
+    "keyword": null,
+    "answer": "*Perfecto!* Se agregaron 2 numero(s) nuevo(s).\n*Total actual: 2 numero(s)*\n51943549521\n51906834826\nPuedes:\n- Enviar mas numeros o archivos para agregarlos\n- Escribir *Confirmar* para pasar al mensaje\n- Escribir *Cancel* para cancelar",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51943549521",
+    "refSerialize": "8bd6a4ef5a53bea97fb4eaf0a83f77d1"
+  },
+  {
+    "ref": "ddae7807-b12f-4ae3-a47a-cf247fb8d462",
+    "keyword": "ans_f1eeb6b5-03ad-4b39-b869-186f2204c51f",
+    "answer": "__end_flow__",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51943549521",
+    "refSerialize": "a07e48655d1eb1adf63c1b74c6ee668e"
+  },
+  {
+    "ref": "af603dcc-588c-4fb2-bcfd-6eb3dc30d72f",
+    "keyword": "a07e48655d1eb1adf63c1b74c6ee668e",
+    "answer": "+51 977 991 608",
+    "options": {},
+    "from": "51943549521",
+    "refSerialize": "5f734fd20eb70278c7c74e65cf6eec23"
+  },
+  {
+    "ref": "ans_f1eeb6b5-03ad-4b39-b869-186f2204c51f",
+    "keyword": "key_71f451da-84d8-458f-85ed-cd411118e080",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "a81d4f221110f3c8e10cdb01107d9a1d",
+    "from": "51943549521"
+  },
+  {
+    "ref": "d0b00184-a245-4ad8-81b8-db8c80dd86f1",
+    "keyword": null,
+    "answer": "*Perfecto!* Se agregaron 1 numero(s) nuevo(s).\n*Total actual: 3 numero(s)*\n51943549521\n51906834826\n51977991608\nPuedes:\n- Enviar mas numeros o archivos para agregarlos\n- Escribir *Confirmar* para pasar al mensaje\n- Escribir *Cancel* para cancelar",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51943549521",
+    "refSerialize": "b7c881e67dc8f38aefc6cb0c31b0149f"
+  },
+  {
+    "ref": "83f7a7fd-4e19-4b4b-9e51-6ff37b5ab3a2",
+    "keyword": "ans_f1eeb6b5-03ad-4b39-b869-186f2204c51f",
+    "answer": "__end_flow__",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51943549521",
+    "refSerialize": "a07e48655d1eb1adf63c1b74c6ee668e"
+  },
+  {
+    "ref": "b9f5da88-c076-4889-85e0-93b29c4965f8",
+    "keyword": "a07e48655d1eb1adf63c1b74c6ee668e",
+    "answer": "confirmar",
+    "options": {},
+    "from": "51943549521",
+    "refSerialize": "eb556648dae407b0c7a0726be0954070"
+  },
+  {
+    "ref": "ans_f1eeb6b5-03ad-4b39-b869-186f2204c51f",
+    "keyword": "key_71f451da-84d8-458f-85ed-cd411118e080",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "a81d4f221110f3c8e10cdb01107d9a1d",
+    "from": "51943549521"
+  },
+  {
+    "ref": "87d89c1b-04bd-4ab3-8aa4-768876c18ed0",
+    "keyword": null,
+    "answer": "*Lista confirmada!* Total: 3 numero(s)\n\n*Paso 2:* Ahora enviame el mensaje que quieres reenviar a todos.\n\nEscribe *Cancel* para cancelar.",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51943549521",
+    "refSerialize": "d7fb45481cc9e617963ed9695667abf4"
+  },
+  {
+    "ref": "775b017a-bf57-4624-b7e5-08c68ebc2405",
+    "keyword": "ans_f1eeb6b5-03ad-4b39-b869-186f2204c51f",
+    "answer": "__end_flow__",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51943549521",
+    "refSerialize": "a07e48655d1eb1adf63c1b74c6ee668e"
+  },
+  {
+    "ref": "014827c9-8bd1-4310-8344-6122ffade64c",
+    "keyword": "a07e48655d1eb1adf63c1b74c6ee668e",
+    "answer": "*Hola este es un mensaje de prueba* https://janna-cosmetics.web.app/\nProbnado distintos estilos:\n- Lista 1\n- Lista 2\n_italic_\n`code`\n~tachado~",
+    "options": {},
+    "from": "51943549521",
+    "refSerialize": "6fbbdaa3bce72787df845cced4ccbb5e"
+  },
+  {
+    "ref": "ans_f1eeb6b5-03ad-4b39-b869-186f2204c51f",
+    "keyword": "key_71f451da-84d8-458f-85ed-cd411118e080",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "a81d4f221110f3c8e10cdb01107d9a1d",
+    "from": "51943549521"
+  },
+  {
+    "ref": "6cc1e651-ec34-43d4-83ef-faacac6cd4c2",
+    "keyword": null,
+    "answer": "*Enviando mensajes!*\n\nTotal: 3 destinatarios\n\nEsto puede tomar un momento para evitar spam...",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51943549521",
+    "refSerialize": "88a13ae00ca45e5d32cf2ed05cc923c5"
+  },
+  {
+    "ref": "a72f7a65-8ea3-4c14-b043-c342d5db2ee3",
+    "keyword": null,
+    "answer": "*Envio completado!*\n\n*Resultados:*\n- Enviados: 3\n- Fallidos: 0\n\nEscribe *spam* para enviar mas mensajes.",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51943549521",
+    "refSerialize": "8db473796c266544b7840252b19cf097"
+  },
+  {
+    "ref": "9a7c0c4b-0b9a-4428-b0b1-99e2d5391acd",
+    "keyword": "ans_f1eeb6b5-03ad-4b39-b869-186f2204c51f",
+    "answer": "__end_flow__",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51943549521",
+    "refSerialize": "a07e48655d1eb1adf63c1b74c6ee668e"
+  },
+  {
+    "ref": "02662f23-6d37-4a7c-803b-d9274efb4740",
+    "keyword": "a07e48655d1eb1adf63c1b74c6ee668e",
+    "answer": "cancel",
+    "options": {},
+    "from": "51943549521",
+    "refSerialize": "b54304fbc46f61410aa4cb3e084bd38c"
+  },
+  {
+    "ref": "ans_58b65d6f-0c92-4c14-a0df-3dba0bf90a57",
+    "keyword": "key_82b6f61c-3506-432b-b0d0-d292a419d921",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "9ca70f54c7c37ef8b630d4f426b9fe72",
+    "from": "51943549521"
+  },
+  {
+    "ref": "1843f1d5-52dc-472e-83ba-900e3b468dd7",
+    "keyword": null,
+    "answer": "*Operacion cancelada.* Todo ha sido olvidado. Escribe *spam* para empezar de nuevo.",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "51943549521",
+    "refSerialize": "d77597368a37ea1826af49253ac0718b"
   }
 ]

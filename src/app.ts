@@ -25,7 +25,7 @@ const EMAIL_CONFIG = {
 };
 
 interface UserState {
-  step: "idle" | "waiting_numbers" | "waiting_message";
+  step: "idle" | "waiting_numbers" | "confirming_numbers" | "waiting_message";
   numbers: string[];
 }
 
@@ -42,8 +42,21 @@ const resetState = (from: string) => {
   userStates.set(from, { step: "idle", numbers: [] });
 };
 
+const addNumbersToState = (state: UserState, newNumbers: string[]): number => {
+  const existing = new Set(state.numbers);
+  let added = 0;
+  for (const num of newNumbers) {
+    if (!existing.has(num)) {
+      state.numbers.push(num);
+      existing.add(num);
+      added++;
+    }
+  }
+  return added;
+};
+
 const normalizePeruNumber = (number: string): string | null => {
-  const cleaned = number.replace(/[\s\-()+]/g, "");
+  const cleaned = number.replace(/[\s\-()+ ]/g, "");
 
   if (!/^\d+$/.test(cleaned)) return null;
 
@@ -57,11 +70,15 @@ const normalizePeruNumber = (number: string): string | null => {
     }
   }
 
+  if (cleaned.startsWith("519") && cleaned.length === 11) {
+    return cleaned;
+  }
+
   return null;
 };
 
 const extractNumbers = (text: string): string[] => {
-  const patterns = text.match(/\b(?:51)?9\d{8}\b/g) || [];
+  const patterns = text.match(/[+]?\s*5?1?\s*9[\d\s]{8,20}/g) || [];
 
   const validNumbers: string[] = [];
   const seen = new Set<string>();
@@ -71,6 +88,17 @@ const extractNumbers = (text: string): string[] => {
     if (normalized && !seen.has(normalized)) {
       seen.add(normalized);
       validNumbers.push(normalized);
+    }
+  }
+
+  if (validNumbers.length === 0) {
+    const lines = text.split(/[\r\n,;]+/);
+    for (const line of lines) {
+      const normalized = normalizePeruNumber(line.trim());
+      if (normalized && !seen.has(normalized)) {
+        seen.add(normalized);
+        validNumbers.push(normalized);
+      }
     }
   }
 
@@ -238,7 +266,7 @@ const documentFlow = addKeyword<Provider, Database>(EVENTS.DOCUMENT)
   .addAction(async (ctx, { flowDynamic, provider, endFlow }) => {
     const state = getState(ctx.from);
 
-    if (state.step !== "waiting_numbers") {
+    if (state.step !== "waiting_numbers" && state.step !== "confirming_numbers") {
       await flowDynamic([
         "Recibi un documento, pero no estoy esperando uno.",
         "",
@@ -303,21 +331,24 @@ const documentFlow = addKeyword<Provider, Database>(EVENTS.DOCUMENT)
         return endFlow();
       }
 
-      state.numbers = extractedNumbers;
-      state.step = "waiting_message";
+      const added = addNumbersToState(state, extractedNumbers);
+      state.step = "confirming_numbers";
 
-      const preview = extractedNumbers.slice(0, 10);
-      const hasMore = extractedNumbers.length > 10;
+      const preview = state.numbers.slice(0, 10);
+      const hasMore = state.numbers.length > 10;
 
       await flowDynamic([
-        `*Archivo procesado!* Encontre ${extractedNumbers.length} numero(s) valido(s):`,
+        `*Archivo procesado!* Se agregaron ${added} numero(s) nuevo(s).`,
+        "",
+        `*Total actual: ${state.numbers.length} numero(s)*`,
         "",
         preview.map((n) => `${n}`).join("\n"),
-        hasMore ? `... y ${extractedNumbers.length - 10} mas` : "",
+        hasMore ? `... y ${state.numbers.length - 10} mas` : "",
         "",
-        "*Paso 2:* Ahora enviame el mensaje que quieres reenviar a todos.",
-        "",
-        "Escribe *Cancel* para cancelar.",
+        "Puedes:",
+        "- Enviar mas numeros o archivos para agregarlos",
+        "- Escribir *Confirmar* para pasar al mensaje",
+        "- Escribir *Cancel* para cancelar",
       ].filter(Boolean).join("\n"));
 
     } catch (error: any) {
@@ -345,34 +376,73 @@ const catchAllFlow = addKeyword<Provider, Database>(EVENTS.WELCOME)
       return endFlow();
     }
 
-    if (state.step === "waiting_numbers") {
-      const extractedNumbers = extractNumbers(userMessage);
+    if (state.step === "waiting_numbers" || state.step === "confirming_numbers") {
+      if (["confirmar", "confirm", "ok", "listo"].includes(userMessage.toLowerCase())) {
+        if (state.numbers.length === 0) {
+          await flowDynamic([
+            "No tienes numeros en la lista todavia.",
+            "",
+            "Envia numeros primero antes de confirmar.",
+          ].join("\n"));
+          return endFlow();
+        }
 
-      if (extractedNumbers.length === 0) {
+        state.step = "waiting_message";
         await flowDynamic([
-          "No encontre numeros validos en tu mensaje.",
+          `*Lista confirmada!* Total: ${state.numbers.length} numero(s)`,
           "",
-          "Recuerda que los numeros deben:",
-          "- Tener 9 digitos empezando con 9",
-          "- O tener 11 digitos empezando con 51",
+          "*Paso 2:* Ahora enviame el mensaje que quieres reenviar a todos.",
           "",
-          "Intenta de nuevo o escribe *Cancel* para cancelar.",
+          "Escribe *Cancel* para cancelar.",
         ].join("\n"));
         return endFlow();
       }
 
-      state.numbers = extractedNumbers;
-      state.step = "waiting_message";
+      const extractedNumbers = extractNumbers(userMessage);
+
+      if (extractedNumbers.length === 0) {
+        if (state.step === "confirming_numbers") {
+          await flowDynamic([
+            "No encontre numeros validos en tu mensaje.",
+            "",
+            "Si ya terminaste de agregar numeros, escribe *Confirmar*.",
+            "O envia mas numeros para agregarlos a la lista.",
+          ].join("\n"));
+        } else {
+          await flowDynamic([
+            "No encontre numeros validos en tu mensaje.",
+            "",
+            "Formatos aceptados:",
+            "- 987654321",
+            "- 51987654321",
+            "- +51 987 654 321",
+            "- +51987654321",
+            "",
+            "Intenta de nuevo o escribe *Cancel* para cancelar.",
+          ].join("\n"));
+        }
+        return endFlow();
+      }
+
+      const added = addNumbersToState(state, extractedNumbers);
+      state.step = "confirming_numbers";
+
+      const preview = state.numbers.slice(0, 10);
+      const hasMore = state.numbers.length > 10;
 
       await flowDynamic([
-        `*Perfecto!* Encontre ${extractedNumbers.length} numero(s) valido(s):`,
+        `*Perfecto!* Se agregaron ${added} numero(s) nuevo(s).`,
         "",
-        extractedNumbers.map((n) => `${n}`).join("\n"),
+        `*Total actual: ${state.numbers.length} numero(s)*`,
         "",
-        "*Paso 2:* Ahora enviame el mensaje que quieres reenviar a todos.",
+        preview.map((n) => `${n}`).join("\n"),
+        hasMore ? `... y ${state.numbers.length - 10} mas` : "",
         "",
-        "Escribe *Cancel* para cancelar.",
-      ].join("\n"));
+        "Puedes:",
+        "- Enviar mas numeros o archivos para agregarlos",
+        "- Escribir *Confirmar* para pasar al mensaje",
+        "- Escribir *Cancel* para cancelar",
+      ].filter(Boolean).join("\n"));
       return endFlow();
     }
 

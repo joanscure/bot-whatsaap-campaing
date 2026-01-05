@@ -1,0 +1,419 @@
+[
+  {
+    "ref": "ans_99c05eca-c01f-4c5b-9885-a361fca3304c",
+    "keyword": "key_cc4ee56e-8f0b-40da-bac7-44066cf5ab10",
+    "answer": "🙌 Hola Joan, empezamos a enviar spam",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "293604fa1c2749a5bf1cbd1dc5b63e71",
+    "from": "51943549521"
+  },
+  {
+    "ref": "ans_898c9b22-c19f-40f6-95e3-0494a11955f6",
+    "keyword": "ans_99c05eca-c01f-4c5b-9885-a361fca3304c",
+    "answer": "Quieres que enviemos el spam ahora?",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 800,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "7ba93a04b4480bd26ec66490b327f033",
+    "from": "51943549521"
+  },
+  {
+    "ref": "ans_0757c7f2-7f11-45f8-a894-da0677fbdd11",
+    "keyword": "ans_898c9b22-c19f-40f6-95e3-0494a11955f6",
+    "answer": "__capture_only_intended__",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 800,
+      "nested": [
+        {
+          "ref": "key_8112169a-2ce8-4968-8afe-47228304c7ca",
+          "keyword": "doc",
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "5a8225144cb89933cbe2a9a3d251d9a2"
+        },
+        {
+          "ref": "ans_6164b646-9b51-4593-b46d-9ddb5779fcbc",
+          "keyword": "key_8112169a-2ce8-4968-8afe-47228304c7ca",
+          "answer": "Termine",
+          "options": {
+            "buttons": [],
+            "capture": true,
+            "delay": 0,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "edf49dd03db9ffe04fa4641a5ce815a7"
+        }
+      ],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "27aba414a2de7fa5be595507666eca52",
+    "from": "51943549521"
+  },
+  {
+    "ref": "17511f26-a052-486c-b225-5d69064c70e8",
+    "keyword": "27aba414a2de7fa5be595507666eca52",
+    "answer": "si",
+    "options": {},
+    "from": "51943549521",
+    "refSerialize": "715ca38ec28b8dabb30e75e511c57a3a"
+  },
+  {
+    "ref": "7859617f-580e-4d51-8553-9462e4861693",
+    "keyword": "715ca38ec28b8dabb30e75e511c57a3a",
+    "answer": "spam",
+    "options": {},
+    "from": "51943549521",
+    "refSerialize": "31dde3b16acbb4494b54c8548858477d"
+  },
+  {
+    "ref": "ans_fdbf49f8-76d7-42e2-b24e-b9d4d167ad23",
+    "keyword": "key_5cd82568-bba9-4d01-9973-c9b41dd055a9",
+    "answer": "🙌 Hola Joan, empezamos a enviar spam",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "a6e992fc4eb29b69d8ea039a6dcd76ce",
+    "from": "51943549521"
+  },
+  {
+    "ref": "ans_81bbef3e-e6d7-4215-af44-b1dd6488e198",
+    "keyword": "ans_fdbf49f8-76d7-42e2-b24e-b9d4d167ad23",
+    "answer": "Quieres que enviemos el spam ahora?",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 800,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "04a05857872bddbf654ebca7ceda1788",
+    "from": "51943549521"
+  },
+  {
+    "ref": "ans_da9a029b-6830-4a7b-8246-0cdb012a57d9",
+    "keyword": "ans_81bbef3e-e6d7-4215-af44-b1dd6488e198",
+    "answer": "__capture_only_intended__",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 800,
+      "nested": [
+        {
+          "ref": "key_9f1cab77-8ba2-470a-a0db-1d2a60679194",
+          "keyword": "doc",
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "5a8225144cb89933cbe2a9a3d251d9a2"
+        },
+        {
+          "ref": "ans_a3d2cccc-2bcf-41ba-98af-884082c4357f",
+          "keyword": "key_9f1cab77-8ba2-470a-a0db-1d2a60679194",
+          "answer": "Termine",
+          "options": {
+            "buttons": [],
+            "capture": true,
+            "delay": 0,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "3adc1329c3d8e361f9b2ebeaff0c8071"
+        }
+      ],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "95904227b3c5239b9f92659297c19db3",
+    "from": "51943549521"
+  },
+  {
+    "ref": "323e8ec8-c8f5-46b9-887e-a15884c88c84",
+    "keyword": "95904227b3c5239b9f92659297c19db3",
+    "answer": "si",
+    "options": {},
+    "from": "51943549521",
+    "refSerialize": "715ca38ec28b8dabb30e75e511c57a3a"
+  },
+  {
+    "ref": "087d3829-8685-414a-b099-fefa7fd7d9f4",
+    "keyword": "715ca38ec28b8dabb30e75e511c57a3a",
+    "answer": "spam",
+    "options": {},
+    "from": "51943549521",
+    "refSerialize": "31dde3b16acbb4494b54c8548858477d"
+  },
+  {
+    "ref": "ans_8fdd3c4d-0232-4846-8eb0-67b351ce316f",
+    "keyword": "key_eb88d55f-afbc-4800-9b98-3268e1a282fc",
+    "answer": "🙌 Hola Joan, empezamos a enviar spam",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "8b61f12314b3e832229a125ff67f2921",
+    "from": "51943549521"
+  },
+  {
+    "ref": "ans_f09c7ecf-eb92-4bdd-b657-ad8bf516891a",
+    "keyword": "ans_8fdd3c4d-0232-4846-8eb0-67b351ce316f",
+    "answer": "Quieres que enviemos el spam ahora?",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 800,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "9eee4c0c999fbba465d7459e3ea82b85",
+    "from": "51943549521"
+  },
+  {
+    "ref": "ans_5d200d01-0651-443a-b0d3-38c15e249f65",
+    "keyword": "ans_f09c7ecf-eb92-4bdd-b657-ad8bf516891a",
+    "answer": "__capture_only_intended__",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 800,
+      "nested": [
+        {
+          "ref": "key_704a257c-a712-473e-9b95-42a226fc18ad",
+          "keyword": "doc",
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "5a8225144cb89933cbe2a9a3d251d9a2"
+        },
+        {
+          "ref": "ans_97ec1d1a-4edf-4d2a-9615-6b0f4e3b7279",
+          "keyword": "key_704a257c-a712-473e-9b95-42a226fc18ad",
+          "answer": "Termine",
+          "options": {
+            "buttons": [],
+            "capture": true,
+            "delay": 0,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "8626da0c446d1a3bdb63a2a87cf33869"
+        }
+      ],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "089568bfca24a2c80b88b06db8ccc023",
+    "from": "51943549521"
+  },
+  {
+    "ref": "0418655c-97eb-407f-a33e-0459890ef751",
+    "keyword": "089568bfca24a2c80b88b06db8ccc023",
+    "answer": "si",
+    "options": {},
+    "from": "51943549521",
+    "refSerialize": "715ca38ec28b8dabb30e75e511c57a3a"
+  },
+  {
+    "ref": "241cd144-b02f-480c-990a-16b6acf14ac3",
+    "keyword": "715ca38ec28b8dabb30e75e511c57a3a",
+    "answer": "spam",
+    "options": {},
+    "from": "51943549521",
+    "refSerialize": "31dde3b16acbb4494b54c8548858477d"
+  },
+  {
+    "ref": "ans_40bed256-f038-4465-8329-3da4c9b89dd0",
+    "keyword": "key_647fbe6e-1b2f-47bf-baca-0d3207821567",
+    "answer": "🙌 Hola Joan, empezamos a enviar spam",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "1d5491755e637a645d1b15bb8471be14",
+    "from": "51943549521"
+  },
+  {
+    "ref": "ans_63a9a967-f311-4f83-8c8e-31d69392925e",
+    "keyword": "ans_40bed256-f038-4465-8329-3da4c9b89dd0",
+    "answer": "Quieres que enviemos el spam ahora?",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 800,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "76967f16f07f8789be6f9e4148829aec",
+    "from": "51943549521"
+  },
+  {
+    "ref": "ans_003d9172-de4d-4c75-926c-8d7e9be3f1b7",
+    "keyword": "ans_63a9a967-f311-4f83-8c8e-31d69392925e",
+    "answer": "__capture_only_intended__",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 800,
+      "nested": [
+        {
+          "ref": "key_b3607474-915f-4937-8b7e-f756351e0bcd",
+          "keyword": "doc",
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "5a8225144cb89933cbe2a9a3d251d9a2"
+        },
+        {
+          "ref": "ans_10196a80-7bec-4594-8ffc-de99cffbc0eb",
+          "keyword": "key_b3607474-915f-4937-8b7e-f756351e0bcd",
+          "answer": "Termine",
+          "options": {
+            "buttons": [],
+            "capture": true,
+            "delay": 0,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "f6bf3db85f78dd7a21c422be029ec4f7"
+        }
+      ],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "15ee0c8daec317c5e57cef0a880975fc",
+    "from": "51943549521"
+  },
+  {
+    "ref": "602893e2-3a5c-4f43-9780-57554380932e",
+    "keyword": "15ee0c8daec317c5e57cef0a880975fc",
+    "answer": "spam",
+    "options": {},
+    "from": "51943549521",
+    "refSerialize": "31dde3b16acbb4494b54c8548858477d"
+  },
+  {
+    "ref": "2a68cf84-9574-476a-aa9c-f4cab9f10b88",
+    "keyword": "31dde3b16acbb4494b54c8548858477d",
+    "answer": "spam",
+    "options": {},
+    "from": "51943549521",
+    "refSerialize": "31dde3b16acbb4494b54c8548858477d"
+  },
+  {
+    "ref": "ans_76cc1349-a469-4320-9af6-9beee6e76774",
+    "keyword": "key_cf4c6a3b-5174-4281-be9e-b52e3fa8b612",
+    "answer": "🙌 Hola Joan, empezamos a enviar spam",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "b2a3f4c02090a53ba92f0df4dbd2bc05",
+    "from": "51943549521"
+  },
+  {
+    "ref": "ans_c992c511-22ff-464a-b4e5-1ba45c819e80",
+    "keyword": "ans_76cc1349-a469-4320-9af6-9beee6e76774",
+    "answer": "Quieres que enviemos el spam ahora?",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 800,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "89b7450aafb377e8acbbcd14b757c138",
+    "from": "51943549521"
+  },
+  {
+    "ref": "ans_b306e953-8fe6-4e3c-84ad-2ab21ff6522a",
+    "keyword": "ans_c992c511-22ff-464a-b4e5-1ba45c819e80",
+    "answer": "__capture_only_intended__",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 800,
+      "nested": [
+        {
+          "ref": "key_a1569ccd-c164-4ec6-bc3f-b07da34afeda",
+          "keyword": "doc",
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "5a8225144cb89933cbe2a9a3d251d9a2"
+        },
+        {
+          "ref": "ans_6eb3bb31-4030-4d82-9974-4cbe769fac50",
+          "keyword": "key_a1569ccd-c164-4ec6-bc3f-b07da34afeda",
+          "answer": "Termine",
+          "options": {
+            "buttons": [],
+            "capture": true,
+            "delay": 0,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "ea5a1471dd7240fdffe6764c1277ec10"
+        }
+      ],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "ccaea670b03b1786309d19d238746d0c",
+    "from": "51943549521"
+  },
+  {
+    "ref": "0676d609-879e-48e8-bf95-e6d60a617716",
+    "keyword": "ccaea670b03b1786309d19d238746d0c",
+    "answer": "si",
+    "options": {},
+    "from": "51943549521",
+    "refSerialize": "715ca38ec28b8dabb30e75e511c57a3a"
+  }
+]
